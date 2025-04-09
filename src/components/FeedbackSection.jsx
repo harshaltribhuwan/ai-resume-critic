@@ -1,36 +1,29 @@
-import { motion } from "framer-motion";
+// components/FeedbackSection.jsx
+import { Fade, Slide } from "react-awesome-reveal";
+import Tilt from "react-parallax-tilt";
 import "./FeedbackSection.scss";
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
 
 export const FeedbackSection = ({ feedback }) => {
   return (
-    <motion.div
-      className="feedback"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      <motion.h2 variants={itemVariants}>💡 Detailed Feedback</motion.h2>
+    <div className="feedback">
+      <Fade cascade damping={0.1} triggerOnce>
+        <h2>💡 Detailed Feedback</h2>
+      </Fade>
+
       <ul>
         {feedback.map((item, index) => (
-          <motion.li key={index} variants={itemVariants}>
-            {item}
-          </motion.li>
+          <Slide key={index} direction="up" cascade damping={0.15} triggerOnce>
+            <Tilt
+              tiltMaxAngleX={6}
+              tiltMaxAngleY={6}
+              glareEnable={true}
+              glareColor="#e0e7ff"
+            >
+              <li>{item}</li>
+            </Tilt>
+          </Slide>
         ))}
       </ul>
-    </motion.div>
+    </div>
   );
 };

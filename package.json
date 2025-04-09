@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-hook/window-size": "^3.1.1",
     "framer-motion": "^12.6.3",
     "pdfjs-dist": "^2.16.105",
     "react": "^19.0.0",
+    "react-awesome-reveal": "^4.3.1",
+    "react-confetti": "^6.4.0",
     "react-dom": "^19.0.0",
+    "react-parallax-tilt": "^1.7.289",
     "sass": "^1.86.3"
   },
   "devDependencies": {

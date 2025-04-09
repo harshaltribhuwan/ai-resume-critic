@@ -1,9 +1,11 @@
-/* Optional inside index.scss or as its own file */
 .app-container {
     padding: 2rem;
     width: 100%;
+    max-height: 98vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #eef1f7, #ffffff);
 }
 
 .app-heading {
@@ -20,7 +22,7 @@
     font-weight: 400;
     color: #4b5563;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .app-card {
@@ -30,11 +32,44 @@
     padding: 2rem;
     max-width: 720px;
     width: 100%;
+    max-height: 95vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 
     h1 {
         text-align: center;
         font-size: 2rem;
         color: #4f46e5;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .app-container {
+        padding: 1rem;
+    }
+
+    .app-card {
+        padding: 1.25rem;
+        max-height: 95vh;
+    }
+
+    .app-heading {
+        font-size: 1.75rem;
+    }
+
+    .app-subheading {
+        font-size: 1rem;
     }
 }
