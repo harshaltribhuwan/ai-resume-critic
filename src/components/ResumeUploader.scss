@@ -1,0 +1,36 @@
+.uploader {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    label {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #444;
+        margin-bottom: 0.75rem;
+        display: block;
+    }
+
+    .upload-btn {
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(135deg, #6366f1, #7c3aed);
+        color: #fff;
+        border: none;
+        border-radius: 0.75rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 5px 20px rgba(99, 102, 241, 0.3);
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: linear-gradient(135deg, #7c3aed, #6366f1);
+        }
+    }
+
+    .file-name {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #555;
+        font-style: italic;
+    }
+}
